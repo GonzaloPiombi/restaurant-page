@@ -71,9 +71,53 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    margin: 8% auto auto;
-    padding: 2% 1%;
+    margin: 150px auto auto;
+    padding: 40px 20px;
     text-align: center;
     height: 400px;
     width: 400px;
+}
+
+.contact {
+    background-color: rgb(255 255 255 / 8%);
+    border: solid 1px white;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: auto;
+    padding-left: 20px;
+    width: 700px;
+}
+
+.contact h2 {
+    margin: 20px 0 15px;
+    
+}
+
+.contact p {
+    margin: 10px 10px;
+}
+
+.phone-address {
+    display: flex;
+    align-items: center;
+}
+
+.schedule {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.schedule p {
+    margin-left: 3px;
+}
+
+.image-container {
+    display: flex;
+    height: 385px;
+}
+
+.contact-image {
+    border-left: solid 1px white;
 }
