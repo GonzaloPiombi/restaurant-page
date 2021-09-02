@@ -28,13 +28,4 @@ function createNavLinks(text) {
     return navItem;
 }
 
-
-function createFooter() {
-    const footer = document.createElement('footer');
-    document.querySelector('#content').appendChild(footer);
-}
-
-export {
-    createHeader,
-    createFooter
-}
+export default createHeader

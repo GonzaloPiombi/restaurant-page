@@ -1,4 +1,4 @@
-import {createHeader, createFooter} from "./page";
+import createHeader from './page';
 
 createHeader();
 createFooter();
