@@ -4,11 +4,20 @@ body {
     margin: 0;
 }
 
+#content {
+    min-height: 100vh;
+}
+
 h1 {
     font-size: 3rem;
     margin: 0;
     padding-left: 50px;
     text-align: center;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-top: 0;
 }
 
 ul {
@@ -30,6 +39,21 @@ a {
     text-decoration: none;
 }
 
+p {
+    font-size: 1.5rem;
+}
+
+button {
+    background: #255f27;
+    border: solid 1px white;
+    color: white;
+    cursor: pointer;
+    font-size: 1.6rem;
+    margin-top: 24px;
+    outline: none;
+    padding: 5px 20px;
+}
+
 .header {
     background-color: rgb(99 99 99 / 75%);
     border-bottom: solid 1px white;
@@ -40,14 +64,16 @@ a {
     width: 100%;
 }
 
-footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-}
-
-.home {
-    height: 100px;
-    width: 100px;
-    background-color: rgb(92, 92, 92);
+main {
+    background-color: rgb(255 255 255 / 8%);
+    border: solid 1px white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 8% auto auto;
+    padding: 2% 1%;
+    text-align: center;
+    height: 400px;
+    width: 400px;
 }
