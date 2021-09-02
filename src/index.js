@@ -1,4 +1,5 @@
 import createHeader from './page';
+import createHomePage from './home';
 
 createHeader();
-createFooter();
+createHomePage();
