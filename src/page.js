@@ -19,9 +19,22 @@ function createTitle(text) {
 }
 
 function createNavLinks(text) {
-    const navItem = document.createElement('li')
-    navItem.textContent = text;
+    const navLink = document.createElement('a');
+    navLink.setAttribute('href', '');
+    navLink.textContent = text;
+
+    const navItem = document.createElement('li');
+    navItem.appendChild(navLink);
     return navItem;
 }
 
-export default createHeader
+
+function createFooter() {
+    const footer = document.createElement('footer');
+    document.querySelector('#content').appendChild(footer);
+}
+
+export {
+    createHeader,
+    createFooter
+}

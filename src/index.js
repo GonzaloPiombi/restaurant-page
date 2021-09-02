@@ -1,3 +1,4 @@
-import createHeader from "./page";
+import {createHeader, createFooter} from "./page";
 
 createHeader();
+createFooter();
