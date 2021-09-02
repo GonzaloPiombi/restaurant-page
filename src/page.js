@@ -28,4 +28,15 @@ function createNavLinks(text) {
     return navItem;
 }
 
-export default createHeader
+function createIcon(name, size, text) {
+    name = document.createElement('span');
+    name.classList.add('material-icons-outlined');
+    name.style = `font-size: ${size}`;
+    name.textContent = text;
+    return name;
+}
+
+export {
+    createHeader,
+    createIcon
+}
