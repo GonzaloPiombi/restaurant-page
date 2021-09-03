@@ -9,17 +9,17 @@ function addLinks() {
         link.addEventListener('click', e => {
             e.preventDefault();
             if (e.currentTarget.textContent === 'Contact') {
-                displayContact();
+                displayContact(link);
             } else if (e.currentTarget.textContent === 'Home') {
-                displayHome();
+                displayHome(link);
             } else if (e.currentTarget.textContent === 'Menu') {
-                displayMenu();
+                displayMenu(link);
             }
         });
     });
 }
 
-function displayHome() {
+function displayHome(link) {
     document.querySelector('main').style = 'display: flex';
     document.querySelector('.contact').style = 'display: none';
     document.querySelector('.menu-container').style = 'display: none';
@@ -29,7 +29,7 @@ function displayHome() {
     document.querySelectorAll('a')[2].classList.remove('active-tab');
 }
 
-function displayMenu() {
+function displayMenu(link) {
     document.querySelector('.menu-container').style = 'display: block';
     document.querySelector('.contact').style = 'display: none';
     document.querySelector('main').style = 'display: none';
@@ -39,7 +39,7 @@ function displayMenu() {
     document.querySelectorAll('a')[2].classList.remove('active-tab');
 }
 
-function displayContact() {
+function displayContact(link) {
     document.querySelector('.contact').style = 'display: flex';
     document.querySelector('main').style = 'display: none';
     document.querySelector('.menu-container').style = 'display: none';
