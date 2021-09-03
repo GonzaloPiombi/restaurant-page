@@ -54,3 +54,6 @@ createHomePage();
 createMenu();
 createContactPage();
 addLinks();
+
+const menuLink = document.querySelectorAll('a')[1];
+document.querySelector('button').addEventListener('click', () => displayMenu(menuLink));
