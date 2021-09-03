@@ -1,5 +1,5 @@
 import { createText } from './home';
-import { createIcon } from './page'
+import { createIcon } from './page';
 
 function createContactPage() {
     const container = document.createElement('div');
