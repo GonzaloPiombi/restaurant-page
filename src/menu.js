@@ -6,11 +6,15 @@ function createMenu() {
     menuOutsideContainer.classList.add('menu-container');
     document.querySelector('#content').appendChild(menuOutsideContainer);
 
-    menuOutsideContainer.appendChild(createIcon('forkAndKnifeIcon', '40px', 'restaurant_menu'));
+    const titleContainer = document.createElement('div');
+    titleContainer.classList.add('title-container');
+    menuOutsideContainer.appendChild(titleContainer);
+
+    titleContainer.appendChild(createIcon('forkAndKnifeIcon', '40px', 'restaurant_menu'));
     const title = document.createElement('h2');
     title.textContent = 'Menu';
-    menuOutsideContainer.appendChild(title);
-    menuOutsideContainer.appendChild(createIcon('forkAndKnifeIcon', '40px', 'restaurant_menu'));
+    titleContainer.appendChild(title);
+    titleContainer.appendChild(createIcon('forkAndKnifeIcon', '40px', 'restaurant_menu'));
 
     const menuInsideContainer = document.createElement('div');
     menuInsideContainer.classList.add('menu');
@@ -22,10 +26,8 @@ function createMenu() {
 
 function pastaInfo(menuInsideContainer) {
     const pastaContainer = document.createElement('div');
-    //Class
     menuInsideContainer.appendChild(pastaContainer);
 
-    //Title
     const title = document.createElement('h3');
     title.textContent = 'Our pastas';
     pastaContainer.appendChild(title);
@@ -42,7 +44,6 @@ function pastaInfo(menuInsideContainer) {
 
 function sauceInfo(menuInsideContainer) {
     const sauceContainer = document.createElement('div');
-    //Class
     menuInsideContainer.appendChild(sauceContainer);
 
     const title = document.createElement('h3');
