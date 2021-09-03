@@ -9,22 +9,44 @@ function addLinks() {
         link.addEventListener('click', e => {
             e.preventDefault();
             if (e.currentTarget.textContent === 'Contact') {
-                document.querySelector('.contact').style = 'display: flex';
-                document.querySelector('main').style = 'display: none';
-
-                link.classList.add('active-tab');
-                document.querySelectorAll('a')[0].classList.remove('active-tab');
-                document.querySelectorAll('a')[1].classList.remove('active-tab');
+                displayContact();
             } else if (e.currentTarget.textContent === 'Home') {
-                document.querySelector('.contact').style = 'display: none';
-                document.querySelector('main').style = 'display: flex';
-
-                link.classList.add('active-tab');
-                document.querySelectorAll('a')[1].classList.remove('active-tab');
-                document.querySelectorAll('a')[2].classList.remove('active-tab');
+                displayHome();
+            } else if (e.currentTarget.textContent === 'Menu') {
+                displayMenu();
             }
         });
     });
+}
+
+function displayHome() {
+    document.querySelector('main').style = 'display: flex';
+    document.querySelector('.contact').style = 'display: none';
+    document.querySelector('.menu-container').style = 'display: none';
+
+    link.classList.add('active-tab');
+    document.querySelectorAll('a')[1].classList.remove('active-tab');
+    document.querySelectorAll('a')[2].classList.remove('active-tab');
+}
+
+function displayMenu() {
+    document.querySelector('.menu-container').style = 'display: block';
+    document.querySelector('.contact').style = 'display: none';
+    document.querySelector('main').style = 'display: none';
+
+    link.classList.add('active-tab');
+    document.querySelectorAll('a')[0].classList.remove('active-tab');
+    document.querySelectorAll('a')[2].classList.remove('active-tab');
+}
+
+function displayContact() {
+    document.querySelector('.contact').style = 'display: flex';
+    document.querySelector('main').style = 'display: none';
+    document.querySelector('.menu-container').style = 'display: none';
+
+    link.classList.add('active-tab');
+    document.querySelectorAll('a')[0].classList.remove('active-tab');
+    document.querySelectorAll('a')[1].classList.remove('active-tab');
 }
 
 createHeader();
