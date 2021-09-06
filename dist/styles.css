@@ -1,5 +1,7 @@
 body {
     background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url('images/background.jpg');
+    background-size: cover;
+    background-position: center center;
     color: white;
     margin: 0;
 }
@@ -12,7 +14,6 @@ h1 {
     font-size: 3rem;
     margin: 0;
     padding-left: 50px;
-    text-align: center;
 }
 
 h2 {
@@ -25,6 +26,7 @@ ul {
     flex-direction: row;
     list-style: none;
     justify-content: space-between;
+    align-items: center;
     padding: 0 50px 0 0;
     width: 500px;
 }
@@ -34,9 +36,26 @@ li {
     margin: 0 4%;
 }
 
+.mobile-menu {
+    display: none;
+    user-select: none;
+}
+
+.mobile-nav {
+    background-color: #00000091;
+    border-top: solid 1px white;
+    padding-bottom: 15px;
+}
+
 a {
     color: white;
+    cursor: pointer;
     text-decoration: none;
+    transition: 1s;
+}
+
+a:hover {
+    color: #ffd602;
 }
 
 p {
@@ -78,6 +97,10 @@ main {
     width: 400px;
 }
 
+main h2 {
+    margin-bottom: 24px;
+}
+
 .menu-container {
     background-color: rgb(255 255 255 / 8%);
     border: solid 1px white;
@@ -109,6 +132,7 @@ main {
 .menu h3 {
     border-bottom: solid 1px white;
     font-size: 1.7rem;
+    margin-bottom: 20px;
 }
 
 .menu p {
@@ -161,5 +185,104 @@ main {
 }
 
 .active-tab {
+    color: #ffd602;
     text-decoration: underline;
+}
+
+/* -----------------------------------Responsive design----------------------------------- */
+
+@media (min-width: 851px) {
+    ul {
+        display: flex !important;
+    }
+
+    nav {
+        all: revert !important;
+    }
+}
+
+@media (max-width: 850px) {
+    .header {
+        display: block;
+    }
+
+    h1 {
+        margin-bottom: 10px;
+    }
+
+    h2 {
+        font-size: 2.3rem;
+    }
+
+    span {
+        font-size: 25px !important;
+    }
+
+    p {
+        font-size: 1.2rem;
+    }
+
+    ul {
+        display: none;
+        margin: 15px 0 0 30px;
+        width: auto;
+    }
+
+    li {
+        margin: 1% 4%;
+    }
+
+    .mobile-menu {
+        display: block;
+        margin-right: 45px;
+        position: absolute;
+        top: 20px;
+        right: 0;
+    }
+}
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2.5rem;
+        padding-left: 20px;
+    }
+
+    .mobile-menu {
+        margin-right: 15px;
+    }
+
+    main {
+        height: auto;
+        margin: 60px auto 20px;
+        width: 300px;
+    }
+
+    .menu-container {
+        height: auto;
+        margin: 60px auto 20px;
+        padding-bottom: 20px;
+        width: 300px;
+    }
+
+    .contact {
+        margin: 60px auto 20px;
+        width: 300px;
+    }
+
+    .contact h2 {
+        font-size: 1.8rem;
+        margin-right: 10px;
+    }
+
+    .contact p {
+        font-size: 1.1rem;
+    }
+
+    .image-container {
+        height: 175px;
+    }
+
+    .contact-image {
+        border-bottom: solid 1px white;
+    }
 }
