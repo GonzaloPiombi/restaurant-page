@@ -1,15 +1,19 @@
 function createHeader() {
-    const header = document.createElement('div');
+    const header = document.createElement('header');
     header.classList.add('header');
     document.querySelector('#content').appendChild(header);
 
     header.appendChild(createTitle('Pastas'));
     
+    const nav = document.createElement('nav');
+    header.appendChild(nav);
+
     const ul = document.createElement('ul');
     header.appendChild(ul);
     ul.appendChild(createNavLinks('Home'));
     ul.appendChild(createNavLinks('Menu'));
     ul.appendChild(createNavLinks('Contact'));
+    nav.appendChild(ul);
 }
 
 function createTitle(text) {

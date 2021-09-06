@@ -2,7 +2,7 @@ import { createText } from './home';
 import { createIcon } from './page';
 
 function createMenu() {
-    const menuOutsideContainer = document.createElement('div');
+    const menuOutsideContainer = document.createElement('section');
     menuOutsideContainer.classList.add('menu-container');
     document.querySelector('#content').appendChild(menuOutsideContainer);
 

@@ -2,7 +2,7 @@ import { createText } from './home';
 import { createIcon } from './page';
 
 function createContactPage() {
-    const container = document.createElement('div');
+    const container = document.createElement('section');
     container.classList.add('contact');
     document.querySelector('#content').appendChild(container);
 
