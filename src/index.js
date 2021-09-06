@@ -1,4 +1,4 @@
-import { createHeader } from './page';
+import { createHeader } from './header';
 import { createHomePage } from './home';
 import createContactPage from './contact';
 import createMenu from './menu';

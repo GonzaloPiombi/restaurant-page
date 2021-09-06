@@ -1,5 +1,5 @@
 import { createText } from './home';
-import { createIcon } from './page';
+import { createIcon } from './header';
 
 function createMenu() {
     const menuOutsideContainer = document.createElement('section');

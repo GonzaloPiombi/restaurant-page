@@ -1,4 +1,4 @@
-import { createIcon } from './page';
+import { createIcon } from './header';
  
 function createHomePage() {
     const main = document.createElement('main');
