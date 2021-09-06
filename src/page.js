@@ -14,6 +14,27 @@ function createHeader() {
     ul.appendChild(createNavLinks('Menu'));
     ul.appendChild(createNavLinks('Contact'));
     nav.appendChild(ul);
+
+    //Mobile menu
+    const mobileIcon = createIcon('mobileMenu', '40px', 'menu');
+    const mobileMenu = document.createElement('a');
+    mobileMenu.classList.add('mobile-menu');
+    header.appendChild(mobileMenu);
+    mobileMenu.appendChild(mobileIcon);
+
+    mobileMenu.addEventListener('click', toggleMobileMenu)
+}
+
+function toggleMobileMenu() {
+    const ul = document.querySelector('ul');
+    const nav = document.querySelector('nav');
+    if (ul.style.display === 'block') {
+        ul.style.display = 'none';
+        nav.classList.remove('mobile-nav');
+    } else {
+        ul.style.display = 'block';
+        nav.classList.add('mobile-nav');
+    }
 }
 
 function createTitle(text) {
