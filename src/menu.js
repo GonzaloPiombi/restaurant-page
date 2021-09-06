@@ -30,6 +30,7 @@ function pastaInfo(menuInsideContainer) {
 
     const title = document.createElement('h3');
     title.textContent = 'Our pastas';
+    title.style = 'color: #33b737';
     pastaContainer.appendChild(title);
 
     pastaContainer.appendChild(createIcon('pastaIcon', '35px', 'dinner_dining'));
@@ -48,6 +49,7 @@ function sauceInfo(menuInsideContainer) {
 
     const title = document.createElement('h3');
     title.textContent = 'Our sauces';
+    title.style = 'color: #dcae28';
     sauceContainer.appendChild(title);
 
     sauceContainer.appendChild(createIcon('sauceIcon', '35px', 'water_drop'));
