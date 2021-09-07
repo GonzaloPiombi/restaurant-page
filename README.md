@@ -5,3 +5,5 @@
 - Introduction to webpack.
 - Introduction to ES6 modules.
 - Continue practicing DOM manipulation since the instructions asks to generate the whole page with JS.
+
+[Live Demo](https://gonzalopiombi.github.io/restaurant-page/)
